@@ -1,5 +1,11 @@
-import { redirect } from 'next/navigation';
+'use client';
+
+import { useEffect } from 'react';
 
 export default function Page() {
-  redirect('/landing.html');
+  useEffect(() => {
+    window.location.replace('/landing.html');
+  }, []);
+
+  return <p>Redirecionando...</p>;
 }
